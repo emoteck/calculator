@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <!-- Primary Meta Tags -->
     <title>SmartCalc – Simple & Stylish Calculator</title>
     <meta name="title" content="SmartCalc – Simple & Stylish Calculator">
@@ -27,15 +28,16 @@
 
     <!-- Mobile Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
 </head>
 
 <body>
-    <div>
-        <div>
-            <h1>0</h1>
+    <div class="calculator">
+        <div class="display">
+            <h1 id="h1">0</h1>
         </div>
-        <button>AC</button>
-        <button>+</button>
+        <button class="ac">AC</button>
+        <button class="plus">+</button>
         <button>7</button>
         <button>8</button>
         <button>9</button>
@@ -47,11 +49,12 @@
         <button>1</button>
         <button>2</button>
         <button>3</button>
-        <button>+</button>
-        <button>0</button>
+        <button>/</button>
+        <button class="zero">0</button>
         <button>.</button>
         <button>=</button>
     </div>
+    <script src="calc.js"></script>
 </body>
 
 </html>

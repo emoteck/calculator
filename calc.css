@@ -1,5 +1,114 @@
-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* default: 4 columns */
+    gap: 10px;
+    max-width: 320px;
+    margin: 20px auto;
+}
+
+.display {
+    grid-column: span 4;
+    background: #222;
+    color: #fff;
+    font-size: 2rem;
+    padding: 15px;
+    text-align: right;
+    border-radius: 8px;
+    height: 120px;
+}
+
+/* Make "0" stretch across 2 columns */
+.zero {
+    grid-column: span 2;
+}
+
+.ac {
+    grid-column: span 2;
+    /* still works fine */
+}
+
+.x {
+    grid-column: span 2;
+    /* still works fine */
+}
+
+.plus {
+    grid-column: span 2;
+    /* still works fine */
+}
+
+button {
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #ddd;
+}
+
+/* ----------------------- */
+/* 📱 Responsive tweaks    */
+/* ----------------------- */
+
+/* Tablets (max 768px wide) */
+@media (max-width: 768px) {
+    .calculator {
+        max-width: 90%;
+        /* shrink container */
+        grid-template-columns: repeat(4, 1fr);
+        /* 3 columns instead of 4 */
+    }
+
+    .display {
+        grid-column: span 4;
+    }
+
+    .zero {
+        grid-column: span 2;
+        /* still works fine */
+    }
+
+    .ac {
+        grid-column: span 2;
+        /* still works fine */
+    }
+
+    .x {
+        grid-column: span 2;
+        /* still works fine */
+    }
+
+    .plus {
+        grid-column: span 2;
+        /* still works fine */
+    }
+}
+
+/* Small phones (max 480px wide) */
+@media (max-width: 480px) {
+    .calculator {
+        grid-template-columns: repeat(4, 1fr);
+        /* stack into 2 columns */
+    }
+
+    .display {
+        grid-column: span 4;
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .zero {
+        grid-column: span 2;
+        /* full row on tiny screens */
+    }
 }
